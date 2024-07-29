@@ -1,0 +1,36 @@
+.app {
+  max-width: 95rem;
+  margin: 0 auto;
+  /* border: 1px solid black; */
+  min-height: 100vh;
+  background: var(--mainBg);
+  font-family: var(--mainFont);
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.app::after {
+  content: "";
+  position: absolute;
+  width: 750px;
+  height: 550px;
+  background: var(--purplebluegradient);
+  bottom: 0;
+  right: 0;
+  filter: blur(65px);
+  border-radius: 35%;
+  opacity: 65%;
+  /* transform: rotate(20deg); */
+}
+
+.app[data-theme="light"] {
+  --mainBg: var(--darkgradientBg);
+  --btnColor: var(--blue);
+  --mainColor: var(--white);
+}
+.app[data-theme="dark"] {
+  --mainBg: var(--darkgradientBg);
+  --mainTextGradient: var(--purplebluegradient);
+  --btnColor: var(--blue);
+  --mainColor: var(--white);
+}

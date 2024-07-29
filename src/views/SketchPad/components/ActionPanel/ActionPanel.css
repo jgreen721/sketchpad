@@ -1,0 +1,154 @@
+#options-panel {
+  padding: 2rem;
+  flex: 1;
+  background: var(--secondaryBg);
+  border-radius: 2rem;
+  border-bottom: 2px solid silver;
+  color: var(--mainColor);
+  /* border: 3px solid orange; */
+}
+
+#pen-color {
+  background: black;
+}
+
+.color-pallette {
+  width: 115px;
+  height: 45px;
+  background: white;
+  border: 3px solid var(--mainBorder);
+  border-radius: 0.5rem;
+}
+
+.palete-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  position: relative;
+  flex: 1;
+}
+
+.label-text {
+  font-size: 1.1rem;
+}
+
+.color-picker {
+  position: absolute;
+  width: 115px;
+  height: 45px;
+  opacity: 0;
+}
+
+.action-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin: 0.25rem;
+  background: transparent;
+  border: 2px solid var(--btnColor);
+  color: var(--btnColor);
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.1s ease;
+  white-space: nowrap;
+  margin: 1;
+}
+
+.action-btn:hover {
+  background: var(--btnColor);
+  color: black;
+}
+
+.active {
+  background: var(--btnColor);
+  color: black;
+}
+
+.range-div {
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  width: 100%;
+  position: relative;
+}
+
+.confirm-resize-modal {
+  background: white;
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 1rem;
+  color: black;
+  z-index: 50;
+  transition: 0.25s ease;
+}
+
+.show-modal {
+  transform: scale(1);
+}
+
+.hide-modal {
+  transform: scale(0);
+}
+
+.confirm-btn {
+  width: 100px;
+  padding: 0.5rem;
+  margin: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.range-input {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+input[type="range"] {
+  /* removing default appearance */
+  /* -webkit-appearance: none;
+  appearance: none; */
+  /* creating a custom design */
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+
+  /* slider progress trick  */
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 15px;
+  background: var(--darkgradientBg);
+  border-radius: 16px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  /* removing default appearance */
+  /* -webkit-appearance: none;
+  appearance: none; */
+  /* creating a custom design */
+  /* height: 15px;
+  width: 15px; */
+  /* background-color: var(--blue);
+  background-color: yellow;
+  border-radius: 50%; */
+  /* border: 2px solid var(--mainBorder); */
+  /* slider progress trick  */
+  /* box-shadow: -407px 0 0 400px var(--mainBorder); */
+}
+
+@media screen and (max-width: 950px) {
+  .panel-section {
+    display: flex;
+    flex-grow: -1;
+  }
+
+  .panel-option {
+    flex: 1;
+  }
+}

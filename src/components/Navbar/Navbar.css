@@ -1,0 +1,41 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-shadow-text {
+  position: absolute;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  inset: 0;
+  color: white;
+  filter: blur(3px);
+}
+
+.nav-link-item {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  transition: 0.25s ease;
+  position: relative;
+  font-size: 1.2rem;
+  z-index: 5;
+}
+
+.nav-link-item:hover {
+  background-image: var(--mainTextGradient);
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+.nav-header {
+  font-size: 3rem;
+}

@@ -1,0 +1,118 @@
+.dash-content {
+  position: relative;
+  z-index: 100;
+  /* border: 2px solid red; */
+  padding: 2rem;
+}
+
+.relative-mask-container {
+  overflow: hidden;
+  position: relative;
+  padding: 2rem;
+  /* border: 2px solid red; */
+}
+
+.dash-header-row {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.dash-header-row::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--secondaryBg);
+  opacity: 45%;
+  clip-path: polygon(0 15%, 100% 0, 100% 84%, 0% 100%);
+  transform: skew(3deg) rotate(-2deg);
+  border-bottom-left-radius: 25%;
+  border-top-left-radius: 32%;
+  animation: scale_from_left 0.5s 1.5s forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+@keyframes scale_from_left {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.dashboard-h1 {
+  font-size: 10rem;
+  z-index: 5;
+  position: relative;
+}
+
+.dashboard-shadow {
+  font-size: 10rem;
+  position: absolute;
+  top: 2rem;
+  filter: blur(10px);
+  opacity: 0;
+  color: white;
+  text-shadow: 1px 1px 10px var(--purple) 1px 1px 5px var(--black);
+  animation: fadein 0.5s var(--delay) forwards;
+}
+
+.link-btn {
+  position: relative;
+  width: 250px;
+  padding: 1rem;
+  border-radius: 100rem;
+  border: 2px solid white;
+  text-align: center;
+  font-size: 1.3rem;
+  white-space: nowrap;
+  color: white;
+  text-shadow: 1px 1px 1px var(--purple);
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: 0.25rem;
+  font-weight: 800;
+  margin: 1.5rem;
+  cursor: pointer;
+  transition: 0.5s ease-out;
+  border: none;
+}
+
+.link-btn:hover {
+  opacity: 75%;
+  transform: scale(0.9, 1.2);
+  transition: 0.15s ease-in;
+  box-shadow: 1px 1px 1px black, 1px 1px 5px black, 1px 4px 20px black;
+}
+
+.link-btn h5 {
+  position: relative;
+  z-index: 5;
+}
+
+.link-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--darkgradientBg);
+  opacity: 85%;
+}
+
+@media screen and (max-width: 1050px) {
+  .dashboard-h1,
+  .dashboard-shadow {
+    font-size: 6.5rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .dashboard-h1,
+  .dashboard-shadow {
+    font-size: 3.75rem;
+  }
+
+  .link-btn {
+    width: auto;
+    font-size: 1rem;
+    display: hidden;
+  }
+}

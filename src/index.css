@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Questrial&family=Tiny5&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fancyFont: "Tiny5", sans-serif;
+  --secondaryFont: "Questrial", sans-serif;
+  --mainFont: "Montserrat", sans-serif;
+  --blue: rgb(35, 90, 215);
+  --purple: rgb(89, 10, 194);
+  --black: rgb(15, 25, 10);
+  --white: rgb(245, 235, 240);
+  --purplebluegradient: linear-gradient(var(--blue), var(--purple));
+  --darkgradientBg: radial-gradient(var(--black), rgb(35, 30, 32));
+  --secondaryBg: linear-gradient(
+    to right,
+    rgb(35, 30, 35),
+    rgb(5, 15, 95),
+    transparent
+  );
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.view-container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  /* border: 2px solid red; */
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fancy-font {
+  font-family: var(--fancyFont);
+}
+
+.gradient-text {
+  background-image: var(--mainTextGradient);
+  background-clip: text;
+  color: transparent;
+}

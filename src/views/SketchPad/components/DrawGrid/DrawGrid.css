@@ -1,0 +1,39 @@
+.grid-parent-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+  position: relative;
+}
+
+#draw-grid {
+  width: 100%;
+  height: 650px;
+  /* border: 3px solid red; */
+  display: grid;
+  grid-template-columns: repeat(var(--i), 1fr);
+  background: rgb(235, 240, 240);
+  cursor: crosshair;
+  position: relative;
+  z-index: 10;
+  cursor: crosshair;
+}
+
+/* .shadow-grid {
+  content: "";
+  position: absolute;
+  height: 650px;
+  width: 100%;
+  background: linear-gradient(silver, darkgray);
+  background: var(--mainBorder);
+  filter: blur(30px);
+} */
+
+.cel {
+  border-top: 1px solid rgba(25, 25, 25, 1);
+  border-left: 1px solid rgba(25, 25, 25, 1);
+}
+
+.border-less {
+  border: 1px solid transparent;
+}
