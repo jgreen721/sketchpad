@@ -2,6 +2,7 @@
   position: absolute;
   inset: 0;
   z-index: 10;
+
   /* height: 100vh; */
   /* background: var(--mainBg); */
 }
@@ -16,6 +17,8 @@
   /* justify-content:sp */
   flex-direction: column;
   padding: 2rem;
+  min-height:120vh;
+  border:2px solid red;
   background:var(--mainBg);
 }
 

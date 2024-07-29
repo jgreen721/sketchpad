@@ -11,7 +11,7 @@
 
 .grid-content-row {
   display: flex;
-  gap: 1rem;
+  gap: 3rem;
   width: 100%;
   padding: 2rem;
 }

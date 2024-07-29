@@ -13,7 +13,7 @@ import "./SketchPad.css"
 
 const SketchPad = () => {
   const [gridCels,setGridCels] = useState([]);
-  const [size,setSize] = useState(40);
+  const [size,setSize] = useState(innerWidth < 650 ? 10 : 30);
   const [active,setActive] = useState(false);
   const [reset,setReset] = useState(false);
   const [action,setAction] = useState('draw');
@@ -21,6 +21,9 @@ const SketchPad = () => {
   const [bgColor,setBgColor] = useState('#FFFFFF');
   const [alert,setAlert] = useState("")
   const [showSubmitPicture,setShowSubmitPicture] = useState(false);
+
+
+ 
 
   useEffect(()=>{
     let savedGrid = JSON.parse(localStorage.getItem("savedGrid"));
