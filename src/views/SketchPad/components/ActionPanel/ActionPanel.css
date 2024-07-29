@@ -31,6 +31,7 @@
 
 .label-text {
   font-size: 1.1rem;
+  font-weight: 300;
 }
 
 .color-picker {
@@ -150,5 +151,31 @@ input[type="range"]::-webkit-slider-thumb {
 
   .panel-option {
     flex: 1;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .mobile-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .color-pallette {
+    width: 75px;
+    height: 35px;
+    background: white;
+    border: 3px solid var(--mainBorder);
+    border-radius: 0.5rem;
+  }
+
+  .action-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  .label-text {
+    font-size: 0.9rem;
   }
 }

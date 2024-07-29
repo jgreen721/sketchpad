@@ -15,7 +15,7 @@ const ActionPanel = ({handleChangeColor,handleDraw,handleColorGrabber,handleRain
         <ActionBtn activeKey="draw" action={action} btnText="Color Fill" handleClick={handleDraw}/>
 
       </div>
-      <div className="panel-section">
+      <div className="panel-section mobile-column">
         <ActionBtn activeKey="grab" action={action} btnText="Color Grabber" handleClick={handleColorGrabber}/>
         <ActionBtn activeKey="erase" action={action} btnText="Toggle Eraser" handleClick={handleEraser}/>
         <ActionBtn activeKey="rainbow" action={action} btnText="Toggle Rainbow" handleClick={handleRainbow}/>
