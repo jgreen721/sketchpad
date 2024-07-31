@@ -5,6 +5,8 @@ import {Dashboard,Gallery,SketchPad} from "./views"
 import {AnimatePresence} from "framer-motion"
 import {useLocation} from "react-router-dom"
 
+
+
 function App() {
   const location = useLocation();
 
@@ -12,13 +14,14 @@ function App() {
 
   return (
     <div data-theme="dark" className="app">
-      <AnimatePresence key={location.pathname} mode="wait" >
+        <AnimatePresence key={location.pathname} mode="wait" >
       <Routes>
         <Route path="/" element={<Dashboard/>}/>
-        <Route path="/sketch" element={<SketchPad/>}/>
-        <Route path="/gallery" element={<Gallery/>}/>
+        {/* <Route path="/sketch" element={<SketchPad/>}/>
+        <Route path="/gallery" element={<Gallery/>}/> */}
       </Routes>
-      </AnimatePresence>
+      </AnimatePresence> 
+
     </div>
   )
 }

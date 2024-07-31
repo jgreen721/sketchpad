@@ -36,6 +36,7 @@ a {
   width: 100%;
   position: relative;
   z-index: 5;
+  padding: 2rem;
   /* border: 2px solid red; */
 }
 

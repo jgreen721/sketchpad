@@ -1,21 +1,21 @@
 .dash-content {
   position: relative;
+  width: fit-content;
   z-index: 100;
-  /* border: 2px solid red; */
-  padding: 2rem;
-}
-
-.relative-mask-container {
-  overflow: hidden;
-  position: relative;
-  padding: 2rem;
-  /* border: 2px solid red; */
+  /* z-index: 100;
+  border: 2px solid red; */
+  /* padding: 2rem; */
+  /* height: 100%; */
 }
 
 .dash-header-row {
   position: relative;
   width: 100%;
   height: 100%;
+  padding: 0.5rem 1rem;
+  gap: 2rem;
+  overflow: hidden;
+  /* border: 2px solid pink; */
 }
 
 .dash-header-row::after {
@@ -23,11 +23,10 @@
   position: absolute;
   inset: 0;
   background: var(--secondaryBg);
-  opacity: 45%;
+  opacity: 65%;
   clip-path: polygon(0 15%, 100% 0, 100% 84%, 0% 100%);
-  transform: skew(3deg) rotate(-2deg);
-  border-bottom-left-radius: 25%;
-  border-top-left-radius: 32%;
+  border-bottom-left-radius: 5%;
+  border-top-left-radius: 12%;
   animation: scale_from_left 0.5s 1.5s forwards;
   transform: scaleX(0);
   transform-origin: left;
@@ -35,21 +34,26 @@
 
 @keyframes scale_from_left {
   100% {
-    transform: scaleX(1);
+    transform: scaleX(1) translateY(0.25rem) rotate(-2deg);
   }
+}
+
+.relative-mask-container {
+  position: relative;
 }
 
 .dashboard-h1 {
   font-size: 10rem;
   z-index: 5;
   position: relative;
+  /* border: 1px solid green; */
 }
 
 .dashboard-shadow {
   font-size: 10rem;
   position: absolute;
-  top: 2rem;
-  filter: blur(10px);
+  top: 0.25rem;
+  filter: blur(3px);
   opacity: 0;
   color: white;
   text-shadow: 1px 1px 10px var(--purple) 1px 1px 5px var(--black);
@@ -61,7 +65,7 @@
   width: 250px;
   padding: 1rem;
   border-radius: 100rem;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   text-align: center;
   font-size: 1.3rem;
   white-space: nowrap;
@@ -75,6 +79,8 @@
   cursor: pointer;
   transition: 0.5s ease-out;
   border: none;
+  outline: none;
+  background: transparent;
 }
 
 .link-btn:hover {
@@ -107,7 +113,10 @@
 @media screen and (max-width: 650px) {
   .dashboard-h1,
   .dashboard-shadow {
-    font-size: 3.75rem;
+    font-size: 3.15rem;
+  }
+
+  .dash-header-row {
   }
 
   .link-btn {

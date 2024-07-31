@@ -1,8 +1,10 @@
 import React from 'react'
+import "./GridBg.css"
 
 const GridBg = () => {
   return (
     <div className="grid-design-parent">
+   
         <div className="grid-design">
           <div className="columns">
 <div className="column column1"></div>
@@ -18,16 +20,16 @@ const GridBg = () => {
 <div className="column column11"></div>
 <div className="column column12"></div>
 <div className="column column13"></div>
-<div className="column column14"></div>
-<div className="column column16"></div>
-<div className="column column17"></div>
-<div className="column column18"></div>
-<div className="column column19"></div>
-<div className="column column20"></div>
-<div className="column column21"></div>
-<div className="column column22"></div>
-<div className="column column23"></div>
-<div className="column column24"></div>
+<div className="column column14 desktop"></div>
+<div className="column column16 desktop"></div>
+<div className="column column17 desktop"></div>
+<div className="column column18 desktop"></div>
+<div className="column column19 desktop"></div>
+<div className="column column20 desktop"></div>
+<div className="column column21 desktop"></div>
+<div className="column column22 desktop"></div>
+<div className="column column23 desktop"></div>
+<div className="column column24 desktop"></div>
 
           </div>
           <div className="rows">
@@ -41,13 +43,13 @@ const GridBg = () => {
           <div className="row row8"></div>
           <div className="row row9"></div>
           <div className="row row10"></div>
-          <div className="row row11"></div>
-          <div className="row row12"></div>
-          <div className="row row13"></div>
-          <div className="row row14"></div>
-          <div className="row row15"></div>
-          <div className="row row16"></div>
-          <div className="row row17"></div>
+          <div className="row row11 desktop"></div>
+          <div className="row row12 desktop"></div>
+          <div className="row row13 desktop"></div>
+          <div className="row row14 desktop"></div>
+          <div className="row row15 desktop"></div>
+          <div className="row row16 desktop"></div>
+          <div className="row row17 desktop"></div>
           {/* <div className="row row18"></div>
           <div className="row row19"></div>
           <div className="row row20"></div>
