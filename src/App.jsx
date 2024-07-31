@@ -17,8 +17,8 @@ function App() {
         <AnimatePresence key={location.pathname} mode="wait" >
       <Routes>
         <Route path="/" element={<Dashboard/>}/>
-        {/* <Route path="/sketch" element={<SketchPad/>}/>
-        <Route path="/gallery" element={<Gallery/>}/> */}
+         <Route path="/sketch" element={<SketchPad/>}/>
+        <Route path="/gallery" element={<Gallery/>}/> 
       </Routes>
       </AnimatePresence> 
 

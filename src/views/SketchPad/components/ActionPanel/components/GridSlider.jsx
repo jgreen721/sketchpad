@@ -18,10 +18,14 @@ const GridSlider = ({size,handleChangeSize}) => {
   return (
     <div className="range-div">
         <input onChange={(e)=>handleSlider(e)} type="range" min="10" step="10" max="50" className="range-input" />
-        <h5>
+        <div className="slider-label">
+        <h5 className="label-text nowrap">
         Grid Size: 
+        </h5>
+        <h5>
         <span className="grid-size">{size}</span> x <span className="grid-size">{size}</span>
         </h5>
+        </div>
         <div className={`confirm-resize-modal ${showModal ? 'show-modal' : 'hide-modal'}`}>
           <h5>Resizing will cause the grid to clear. Are you sure you want to continue?</h5>
           <button className="confirm-btn blue" onClick={handleConfirmSizeChange}>Yes</button>

@@ -1,6 +1,5 @@
-import React, {useEffect,useRef,useState} from 'react'
+import React, {useEffect,useState} from 'react'
 import { Navbar } from '../../components'
-// import { DrawGrid,ActionPanel } from './components'
 import {ActionPanel,DrawGrid,SubmitPicture} from "./components"
 import {motion} from "framer-motion"
 import "./SketchPad.css"

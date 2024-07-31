@@ -29,10 +29,6 @@
   position: relative;
   height: 225px;
   width: 250px;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  /* border: 6px solid red; */
 }
 
 .gallery-img-item::after {
@@ -66,14 +62,8 @@
     height: 185px;
     width: 200px;
     display: flex;
-    /* align-items: center; */
     justify-content: center;
   }
-
-  /* .dashboard-h1,
-  .dashboard-shadow {
-    font-size: 6.5rem;
-  } */
 }
 
 @media screen and (max-width: 650px) {
@@ -84,18 +74,10 @@
   }
 
   .dash-overlay-gallery {
-    /* grid-template-columns: repeat(2, 1fr); */
-
-    /* border: 2px solid red; */
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
   }
-  /* 
-  .dashboard-h1,
-  .dashboard-shadow {
-    font-size: 3.75rem;
-  } */
 }
