@@ -1,6 +1,6 @@
 import React, {useRef,useEffect, useState} from 'react'
 import { IoMdCloseCircleOutline } from "react-icons/io";
-
+import {SubmitGalleryItem} from "./components"
 import "./SubmitPicture.css"
 
 const SubmitPicture = ({showSubmitPicture,setShowSubmitPicture,gridData,size,gridColor}) => {
@@ -9,7 +9,6 @@ const SubmitPicture = ({showSubmitPicture,setShowSubmitPicture,gridData,size,gri
   const [canvasSize,setCanvasSize] = useState(400)
   const [savedItems,setSavedItems] = useState([])
 
-  // console.log("submitPictureRef");
 
 
   useEffect(()=>{
@@ -55,7 +54,7 @@ const SubmitPicture = ({showSubmitPicture,setShowSubmitPicture,gridData,size,gri
           // posX+=width;
           posX+=width;
 
-          if(posX >= canvasSize){
+          if(posX >= canvas.width){
             posX = 0;
             posY+=height;
           }
@@ -141,16 +140,11 @@ const SubmitPicture = ({showSubmitPicture,setShowSubmitPicture,gridData,size,gri
               </form>
           </div>
         </div>
-        <h2>Image Gallery</h2>
+        <h2 className="fancy-font gradient-text submit-gallery-header">Image Gallery</h2>
     <div className="img-gallery">
       {savedItems.map(item=>(
-        <div className="gallery-item" key={item.id}>
-          <div className="gallery-item-title-div">
-          <h3 className="gallery-item-title fancy-font gradient-text">{item.title}</h3>
-          </div>
-          <img className="gallery-img" src={item.img} alt="img"/>
-          <h5 className="gallery-item-description">{item.description}</h5>
-        </div>
+ 
+        <SubmitGalleryItem key={item.id} item={item}/>
       ))}
     </div>
     </div>

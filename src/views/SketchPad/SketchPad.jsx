@@ -12,7 +12,7 @@ import "./SketchPad.css"
 
 const SketchPad = () => {
   const [gridCels,setGridCels] = useState([]);
-  const [size,setSize] = useState(innerWidth < 650 ? 10 : 30);
+  const [size,setSize] = useState(innerWidth < 650 ? 10 : 40);
   const [active,setActive] = useState(false);
   const [reset,setReset] = useState(false);
   const [action,setAction] = useState('draw');
