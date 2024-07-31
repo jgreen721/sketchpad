@@ -8,14 +8,15 @@
   content: "";
   position: absolute;
   inset: 0;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(2px);
 }
 
 .dash-overlay::before {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: 0.25;
+  opacity: 0.55;
+  background: black;
 }
 
 .dash-overlay-gallery {
@@ -28,9 +29,10 @@
   position: relative;
   height: 225px;
   width: 250px;
-  display: flex;
-  /* align-items: center; */
-  justify-content: center;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* border: 6px solid red; */
 }
 
 .gallery-img-item::after {
@@ -81,8 +83,15 @@
     width: 85px;
   }
 
-  .dash-gallery {
-    grid-template-columns: repeat(2, 1fr);
+  .dash-overlay-gallery {
+    /* grid-template-columns: repeat(2, 1fr); */
+
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
   /* 
   .dashboard-h1,
